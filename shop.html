@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shop - Artwork for Sale</title>
+    <style>
+      :root{--lilac:#C8A2C8}
+      body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;margin:0;background:#f8f8fb}
+      header{background:var(--lilac);color:#fff;padding:2rem 1rem;text-align:center}
+      header h1{margin:0;font-size:1.8rem}
+      .container{max-width:900px;margin:2rem auto;padding:0 1rem}
+      .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+      .card{border:1px solid #eee;padding:1rem;border-radius:8px;background:#fff}
+      .card h3{margin-top:0}
+      .actions a{display:inline-block;margin-right:0.5rem;padding:0.5rem 0.75rem;border-radius:6px;text-decoration:none;color:var(--lilac);border:1px solid var(--lilac)}
+      footer{color:#666;text-align:center;padding:2rem 1rem}
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Artwork For Sale</h1>
+    </header>
+
+    <main class="container">
+      <p>Welcome — browse available collections below. Click a collection to view pieces and purchase options.</p>
+
+      <section class="cards">
+        <article class="card">
+          <h3>Doodles Collection</h3>
+          <p>Playful sketches and bright designs from the Doodles series.</p>
+          <div class="actions">
+            <a href="Doodles.html">View Doodles</a>
+            <a href="mailto:you@example.com?subject=Buying%20Doodles%20Collection" style="border-color:var(--lilac);color:#fff;background:var(--lilac);">Buy</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Official Art</h3>
+          <p>Signature prints and limited editions from the Official Art collection.</p>
+          <div class="actions">
+            <a href="OfficialArt.html">View Official Art</a>
+            <a href="mailto:jayson.mendoza02252004@gmail.com?subject=Buying%20Official%20Art" style="border-color:var(--lilac);color:#fff;background:var(--lilac);">Buy</a>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <small>© Your Name — Interested buyers: contact via the details on each collection page.</small>
+    </footer>
+  </body>
+</html>
