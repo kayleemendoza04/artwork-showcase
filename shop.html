@@ -5,16 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Shop - Artwork for Sale</title>
     <style>
-      :root{--lilac:#C8A2C8}
-      body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;margin:0;background:#f8f8fb}
-      header{background:var(--lilac);color:#fff;padding:2rem 1rem;text-align:center}
-      header h1{margin:0;font-size:1.8rem}
-      .container{max-width:900px;margin:2rem auto;padding:0 1rem}
-      .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
-      .card{border:1px solid #eee;padding:1rem;border-radius:8px;background:#fff}
-      .card h3{margin-top:0}
-      .actions a{display:inline-block;margin-right:0.5rem;padding:0.5rem 0.75rem;border-radius:6px;text-decoration:none;color:var(--lilac);border:1px solid var(--lilac)}
-      footer{color:#666;text-align:center;padding:2rem 1rem}
+      :root{--lilac:#C8A2C8;--bg:#f3f3f3;--surface:#fff;--border:#e8e5ee;--text:#2c1f3a;--muted:#6f5c84;}
+      *{box-sizing:border-box;}
+      body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;}
+      header{background:var(--lilac);color:#fff;padding:2rem 1rem;text-align:center;}
+      header h1{margin:0;font-size:clamp(1.8rem,2.5vw,2.8rem);}
+      main{max-width:900px;margin:2rem auto;padding:0 1rem 6rem;}
+      .hero{display:grid;gap:1rem;padding:1.5rem;background:#fcf8ff;border:1px solid #f0e8fb;border-radius:20px;margin-bottom:1.5rem;}
+      .hero h2{margin:0;font-size:clamp(1.5rem,2vw,2.2rem);}
+      .hero small{color:var(--muted);line-height:1.6;}
+      .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;}
+      .card{background:var(--surface);border:1px solid var(--border);padding:1.25rem;border-radius:18px;box-shadow:0 18px 40px rgba(68,23,126,.08);}
+      .card h3{margin-top:0;}
+      .actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1rem;}
+      .actions a{display:inline-block;padding:.65rem .95rem;border-radius:999px;text-decoration:none;font-weight:600;transition:transform .2s ease;color:var(--lilac);border:1px solid var(--lilac);background:#fff;}
+      .actions a:hover{transform:translateY(-2px);}
+      .actions a.primary{color:#fff;background:var(--lilac);border-color:var(--lilac);}
+      footer{position:fixed;left:0;right:0;bottom:0;background:#f7f3fb;color:#333;text-align:center;padding:.75rem 0;border-top:1px solid rgba(0,0,0,.08);font-size:.95rem;}
     </style>
   </head>
   <body>
@@ -22,8 +29,11 @@
       <h1>Artwork For Sale</h1>
     </header>
 
-    <main class="container">
-      <p>Welcome — browse available collections below. Click a collection to view pieces and purchase options.</p>
+    <main>
+      <section class="hero">
+        <h2>Shop available collections</h2>
+        <small>Browse current artwork collections and follow the links to each gallery.</small>
+      </section>
 
       <section class="cards">
         <article class="card">
@@ -31,7 +41,7 @@
           <p>Playful sketches and bright designs from the Doodles series.</p>
           <div class="actions">
             <a href="Doodles.html">View Doodles</a>
-            <a href="mailto:you@example.com?subject=Buying%20Doodles%20Collection" style="border-color:var(--lilac);color:#fff;background:var(--lilac);">Buy</a>
+            <a class="primary" href="mailto:you@example.com?subject=Buying%20Doodles%20Collection">Buy</a>
           </div>
         </article>
 
@@ -40,14 +50,12 @@
           <p>Signature prints and limited editions from the Official Art collection.</p>
           <div class="actions">
             <a href="OfficialArt.html">View Official Art</a>
-            <a href="mailto:jayson.mendoza02252004@gmail.com?subject=Buying%20Official%20Art" style="border-color:var(--lilac);color:#fff;background:var(--lilac);">Buy</a>
+            <a class="primary" href="mailto:jayson.mendoza02252004@gmail.com?subject=Buying%20Official%20Art">Buy</a>
           </div>
         </article>
       </section>
     </main>
 
-    <footer>
-      <small>© Your Name — Interested buyers: contact via the details on each collection page.</small>
-    </footer>
+    <footer>© Bailey Family</footer>
   </body>
 </html>

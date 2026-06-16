@@ -1,51 +1,60 @@
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Home — Artwork Showcase</title>
-		<style>
-			:root{--lilac:#C8A2C8}
-			body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;margin:0;background:#fff;min-height:100vh;position:relative;overflow-x:hidden;color:var(--lilac)}
-			/* blurred background artwork via pseudo-element */
-			body::before{content:"";position:fixed;inset:0;background-image:url('assets/background.jpg');background-size:cover;background-position:center;filter:blur(20px) saturate(1.02);transform:scale(1.06);z-index:-1;opacity:0.95;pointer-events:none;will-change:transform}
-			/* Reduce blur on narrow/low-power devices */
-			@media (max-width: 700px), (prefers-reduced-motion: reduce) {
-				body::before{filter:blur(8px) saturate(1.02);transform:scale(1.03)}
-			}
-			/* Avoid heavy effects when user prefers less data */
-			@media (prefers-reduced-data: reduce) {
-				body::before{filter: none;opacity:0.9}
-			}
-			header{background:var(--lilac);color:#fff;padding:1.5rem;text-align:center}
-			header h1{margin:0}
-			main{max-width:900px;margin:2rem auto;padding:0 1rem 4rem}
-			nav a{display:inline-block;margin-right:1rem;color:var(--lilac);text-decoration:none}
-			footer{position:fixed;left:0;right:0;bottom:0;font-size:.9rem;color:#333;text-align:center;padding:.75rem 0;border-top:1px solid rgba(0,0,0,.08);background:#f7f3fb}
-			footer .footer-nav{margin-bottom:0.5rem}
-			footer a{color:var(--lilac);text-decoration:none;margin:0 .5rem}
-			footer a:hover{text-decoration:underline}
-		</style>
-	</head>
-	<body>
-		<header>
-			<h1>Artwork Showcase</h1>
-		</header>
-		<main>
-			<p>Welcome to the showcase. Visit the shop to buy original artwork and prints.</p>
-			<section>
-				<h2>About Me</h2>
-				<p>Hi, I’m Kaylee Bailey. I love sharing original designs, sketches, and artwork that reflect bold imagination and personal stories.</p>
-				<h3>Education</h3>
-				<p>Currently pursuing a Bachelor’s Degree in Web Development at Full Sail University.</p>
-			</section>
-			<nav>
-				<a href="shop.html">Shop</a>
-				<a href="tel:+15204789502" style="color:#fff;background:rgba(0,0,0,0.1);padding:0.4rem 0.6rem;border-radius:6px;text-decoration:none; margin-left:1rem;">Call</a>
-				<a href="mailto:jayson.mendoza02252004@gmail.com" style="color:#fff;background:rgba(0,0,0,0.1);padding:0.4rem 0.6rem;border-radius:6px;text-decoration:none; margin-left:1rem;">Email</a>
-			</nav>
-		</main>
-		<footer>© Bailey Family</footer>
-	</body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home — Artwork Showcase</title>
+    <style>
+      :root{--lilac:#C8A2C8;--bg:#f3f3f3;--surface:#fff;--border:#e8e5ee;--text:#2c1f3a;--muted:#6f5c84;}
+      *{box-sizing:border-box;}
+      body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;position:relative;overflow-x:hidden;}
+      header{background:var(--lilac);color:#fff;padding:2rem 1rem;text-align:center;}
+      header h1{margin:0;font-size:clamp(1.8rem,2.5vw,2.8rem);}
+      main{max-width:900px;margin:2rem auto;padding:0 1rem 6rem;}
+      .hero{display:grid;gap:1rem;padding:1.5rem;background:#fcf8ff;border:1px solid #f0e8fb;border-radius:20px;}
+      .hero h2{margin:0;font-size:clamp(1.5rem,2vw,2.2rem);}
+      .hero small{color:var(--muted);line-height:1.6;}
+      .card{background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:1.5rem;margin-top:1.5rem;box-shadow:0 18px 40px rgba(68,23,126,.08);}
+      .card h2{margin-top:0;}
+      nav{margin-top:1.5rem;}
+      nav a{display:inline-block;margin-right:1rem;padding:.75rem 1rem;border-radius:999px;text-decoration:none;font-weight:600;color:var(--lilac);border:1px solid var(--lilac);background:#fff;transition:transform .2s ease;}
+      nav a:hover{transform:translateY(-2px);}
+      .button-primary{color:#fff;background:rgba(0,0,0,0.1);border-color:transparent;}
+      footer{position:fixed;left:0;right:0;bottom:0;background:#f7f3fb;color:#333;text-align:center;padding:.75rem 0;border-top:1px solid rgba(0,0,0,.08);font-size:.95rem;}
+      footer a{color:var(--lilac);text-decoration:none;margin:0 .5rem;}
+      footer a:hover{text-decoration:underline;}
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Artwork Showcase</h1>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h2>Welcome to the Artwork Showcase</h2>
+        <small>Discover original sketches, collections, and prints curated by Kaylee Bailey.</small>
+      </section>
+
+      <section class="card">
+        <p>Welcome to the showcase. Visit the shop to buy original artwork and prints.</p>
+
+        <div>
+          <h2>About Me</h2>
+          <p>Hi, I’m Kaylee Bailey. I love sharing original designs, sketches, and artwork that reflect bold imagination and personal stories.</p>
+          <h3>Education</h3>
+          <p>Currently pursuing a Bachelor’s Degree in Web Development at Full Sail University.</p>
+        </div>
+
+        <nav>
+          <a href="shop.html">Shop</a>
+          <a class="button-primary" href="tel:+15204789502">Call</a>
+          <a class="button-primary" href="mailto:jayson.mendoza02252004@gmail.com">Email</a>
+        </nav>
+      </section>
+    </main>
+
+    <footer>© Bailey Family</footer>
+  </body>
 </html>
